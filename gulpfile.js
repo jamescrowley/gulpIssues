@@ -10,7 +10,7 @@ gulp.task('scripts', function() {
       './scripts/myApp.init.js',
     ], { base: './' })
                 .pipe(sourcemaps.init())
-                .pipe(concat('myApp.min.js', {'newLine' : '\r\n'}))
+                .pipe(concat('myApp.min.js'))
                 // comment out the line below, and all works fine
                 .pipe(uglify())
                 .pipe(sourcemaps.write('./'))
