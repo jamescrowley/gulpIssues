@@ -5,13 +5,16 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 
 gulp.task('scripts', function() {
-   return gulp.src('./scripts/myApp.js', { base: './' })
+   return gulp.src([
+      './scripts/!(myApp.init)*.js',
+      './scripts/myApp.init.js',
+    ], { base: './' })
                 .pipe(sourcemaps.init())
                 .pipe(concat('myApp.min.js', {'newLine' : '\r\n'}))
                 // comment out the line below, and all works fine
                 .pipe(uglify())
                 .pipe(sourcemaps.write('./'))
-                .pipe(gulp.dest('./Scripts/'))
+                .pipe(gulp.dest('./dist/'))
                 .on('end', function() { gutil.log('Minified myApp.min.js'); })
                 .on('error', handleError);
 });
