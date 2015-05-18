@@ -1,6 +1,6 @@
 # gulpIssues
 
-I'm seeing some weird issues with source maps when using gulp, concat and uglify. 
+I'm seeing some weird issues with source maps when using gulp, concat and uglify. StackOverflow question [here](http://stackoverflow.com/questions/30281998/how-can-i-generate-valid-source-maps-with-gulp-uglify-concat-on-windows)
 
 1. Restore NPM using npm install
 2. Run gulp (it will watch)
