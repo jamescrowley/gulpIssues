@@ -6,9 +6,10 @@ var gutil = require('gulp-util');
 
 gulp.task('scripts', function() {
    return gulp.src('./scripts/myApp.js', { base: './' })
-                .pipe(sourcemaps.init({loadMaps: true}))
-                .pipe(uglify())
+                .pipe(sourcemaps.init())
                 .pipe(concat('myApp.min.js', {'newLine' : '\r\n'}))
+                // comment out the line below, and all works fine
+                .pipe(uglify())
                 .pipe(sourcemaps.write('./'))
                 .pipe(gulp.dest('./Scripts/'))
                 .on('end', function() { gutil.log('Minified myApp.min.js'); })
