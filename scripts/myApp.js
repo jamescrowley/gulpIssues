@@ -1,6 +1,6 @@
-﻿var fundApps = window.fundApps || {};
+﻿var myApp = window.myApp || {};
 
-fundApps.AssetDataView = function () {
+myApp.SomeView = function () {
     var getCellClass = function(prop) {
         var className = "default";
         if (prop && prop.Value !== prop.PreviousValue) {
@@ -15,6 +15,6 @@ fundApps.AssetDataView = function () {
     };
 };
 
-var ado = new fundApps.AssetDataView();
-var cellClass = ado.getCellClass({ Value: 1, PreviousValue: 10});
+var someView = new myApp.SomeView();
+var cellClass = someView.getCellClass({ Value: 1, PreviousValue: 10});
 document.getElementById('testEl').innerHTML = cellClass;

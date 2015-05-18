@@ -5,13 +5,13 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 
 gulp.task('scripts', function() {
-   return gulp.src('./scripts/rapptr.js', { base: './' })
+   return gulp.src('./scripts/myApp.js', { base: './' })
                 .pipe(sourcemaps.init({loadMaps: true}))
                 .pipe(uglify())
-                .pipe(concat('rapptr.min.js', {'newLine' : '\r\n'}))
+                .pipe(concat('myApp.min.js', {'newLine' : '\r\n'}))
                 .pipe(sourcemaps.write('./'))
                 .pipe(gulp.dest('./Scripts/'))
-                .on('end', function() { gutil.log('Minified rapptr.min.js'); })
+                .on('end', function() { gutil.log('Minified myApp.min.js'); })
                 .on('error', handleError);
 });
 
