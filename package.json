@@ -1,7 +1,7 @@
 {
-  "name": "Rapptr",
+  "name": "myApp",
   "version": "0.0.0",
-  "description": "This is the primary repository for our Rapptr application",
+  "description": "This is the primary repository for our myApp application",
   "main": "build.js",
   "devDependencies": {},
   "scripts": {
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fundapps/rapptr"
+    "url": "https://github.com/xxx/myApp"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/fundapps/rapptr/issues"
+    "url": "https://github.com/xxx/myApp/issues"
   },
   "dependencies": {
     "del": "^1.1.1",
