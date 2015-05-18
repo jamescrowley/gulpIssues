@@ -15,9 +15,11 @@ gulp.task('scripts', function() {
                 .on('error', handleError);
 });
 
+gulp.task('watch', function() {
+  return gulp.watch('./scripts/*', ['scripts']);
+});
 
-gulp.task('default', ['scripts']);
-
+gulp.task('default', ['scripts','watch']);
 
 function handleError(err) {
   gutil.log(err.toString());
